@@ -1,3 +1,98 @@
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.module = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+module.exports = tableify;
+
+function tableify(obj, processingArray, parents) {
+    var buf = [];
+    var type = typeof obj;
+    parents = parents || [];
+
+    if (type !== 'object' || obj == null || obj == undefined) {
+    }
+    else if (~parents.indexOf(obj)) {
+        return "[Circular]";
+    }
+    else {
+        parents.push(obj);
+    }
+
+    if (Array.isArray(obj)) {
+        if (typeof obj[0] === 'object') {
+            buf.push('<table>','<thead>','<tr>');
+
+            Object.keys(obj[0] || {}).forEach(function (key) {
+                buf.push('<th' + getClass(obj[0][key]) + '>', key, '</th>');
+            });
+
+            buf.push('</tr>', '</thead>', '<tbody>');
+
+            obj.forEach(function (record) {
+                buf.push('<tr>');
+                buf.push(tableify(record, true, parents));
+                buf.push('</tr>');
+            });
+
+            buf.push('</tbody></table>');
+        }
+        else {
+            buf.push('<table>','<tbody>');
+
+            obj.forEach(function (val) {
+                buf.push('<tr>', '<td' + getClass(val) + '>', tableify(val, true, parents), '</td>', '</tr>');
+            });
+
+            buf.push('</tbody>','</table>');
+        }
+        
+    }
+    else if (obj && typeof obj === 'object' && !Array.isArray(obj) && !(obj instanceof Date)) {
+        if (!processingArray) {
+            buf.push('<table>');
+
+            Object.keys(obj).forEach(function (key) {
+                buf.push('<tr>', '<th' + getClass(obj[key]) + '>', key, '</th>', '<td' + getClass(obj[key]) + '>', tableify(obj[key], false, parents), '</td>', '</tr>');
+            });
+
+            buf.push('</table>');
+        }
+        else {
+            Object.keys(obj).forEach(function (key) {
+                if (typeof obj[key] === 'object' && !Array.isArray(obj[key])) {
+                    buf.push('<td' + getClass(obj[key]) + '>', tableify(obj[key], false, parents), '</td>');
+                }
+                else {
+                    buf.push('<td' + getClass(obj[key]) + '>', tableify(obj[key], processingArray, parents), '</td>');
+                }
+            });
+        }
+    }
+    else {
+        buf.push(obj);
+    }
+
+    if (type !== 'object' || obj == null || obj == undefined) {
+    }
+    else {
+        parents.pop(obj);
+    }
+
+    return buf.join('');
+}
+
+function getClass(obj) {
+    return ' class="' 
+        + ((obj && obj.constructor)
+            ? obj.constructor.name 
+            : typeof obj
+        ).toLowerCase()
+        + ((obj === null)
+            ? ' null'
+            : ''
+        )
+        + '"'
+        ;
+}
+
+},{}],2:[function(require,module,exports){
 var tableify = require('tableify');
 var exports = module.exports = {};
 var sorted;
@@ -140,3 +235,5 @@ function sortResults() {
 window.onload = function() {
     render();
 }
+},{"tableify":1}]},{},[2])(2)
+});

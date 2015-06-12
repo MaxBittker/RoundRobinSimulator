@@ -1,0 +1,17 @@
+#results tr:nth-child(-n+4)
+{
+    background-color:rgb(187,238,187);    
+}
+#results tr:nth-child(n+5)
+{
+    background-color:rgb(238,187,187);    
+}
+#results td
+{
+    align-self: center;
+}
+#results
+{
+align-content: center;
+/*    background-color: aqua*/
+}
