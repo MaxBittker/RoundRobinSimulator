@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-js">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <title>Proleague Round Robin Analyzer</title>
+        <meta name="ResourceLoaderDynamicStyles" content="">
+    </head>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="maru.css">
+    <body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-2015_Proleague_Round_3 skin-dtrush action-view">
+        <div style="max-width:600px;margin:auto;">
+            <div id="header">
+                <p>Proleague has six awesome teams fighting for three remaining playoff spots. Fill out the remaining eight matchups to predict who you think will make the cut. </p>
+            </div>
+            <div id="results">
+                if you're reading this it's too late (or have noscript)
+            </div>
+            <div style="display:inline-block; vertical-align: top; margin: 0 0 0 0;padding-right:3em;">
+                <br>
+                <table class="wikitable crosstable" style="text-align:center;margin:0;line-height:14px">
+                    <tbody>
+                        <tr style="height:30px">
+                            <th><span class="team-template-team-icon"><span class="team-template-image"><img alt="Jin Air Green Wings" src="Green_Wings_std.png" width="60" height="25"></a></span></span>
+                            </th>
+                            <td style="padding:0;background-color:#ffcccc" class=""><b>2-3</b>
+                                <br>
+                                <abbr title="Week 4 - Match 4">
+                                </abbr>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr style="height:30px">
+                            <th><span class="team-template-team-icon"><span class="team-template-image"><img alt="KT Rolster" src="Rolsterlogo_std.png" width="60" height="25"></a></span></span>
+                            </th>
+                            <td style="padding:0;background-color:#ffffff" id="d1">
+                                <input type="text" style='max-width:30px;padding-left:10px' name="gameinput" class='picker' placeholder="0-0" onchange="module.cb1()" id="u1">
+                                <br>
+                                <abbr title="Week 6 - Match 1">
+                                </abbr>
+                                </a>
+                            </td>
+                            <td style="padding:0;background-color:#ffcccc" class=""><b>2-3</b>
+                                <br>
+                                <abbr title="Week 1 - Match 1">
+                                </abbr>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr style="height:30px">
+                            <th><span class="team-template-team-icon"><span class="team-template-image"><img alt="MVP (team)" src="MVPlogo_std.png" width="60" height="25"></a></span></span>
+                            </th>
+                            <td style="padding:0;background-color:#ccffcc" class=""><b>3-2</b>
+                                <br>
+                                <abbr title="Week 3 - Match 2">
+                                </abbr>
+                                </a>
+                            </td>
+                            <td style="padding:0;background-color:#ffffff" id="d2">
+                                <input type="text" style='max-width:30px;padding-left:10px' name="gameinput" class='picker' placeholder="0-0" onchange="module.cb2()" id="u2">
+                                <br>
+                                <abbr title="Week 6 - Match 3">
+                                </abbr>
+                                </a>
+                            </td>
+                            <td style="padding:0;background-color:#ffffff" id="d3">
+                                <input type="text" style='max-width:30px;padding-left:10px' name="gameinput" class='picker' placeholder="0-0" onchange="module.cb3()" id="u3">
+                                <br>
+                                <abbr title="Week 7 - Match 3">
+                                </abbr>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr style="height:30px">
+                            <th><span class="team-template-team-icon"><span class="team-template-image"><img alt="Prime" src="Primelogo_std.png" width="60" height="25"></a></span></span>
+                            </th>
+                            <td style="padding:0;background-color:#ffffff" id="d4">
+                                <input type="text" style='max-width:30px;padding-left:10px' name="gameinput" class='picker' placeholder="0-0" onchange="module.cb4()" id="u4">
+                                <br>
+                                <abbr title="Week 7 - Match 1">
+                                </abbr>
+                                </a>
+                            </td>
+                            <td style="padding:0;background-color:#ffcccc" class=""><b>0-3</b>
+                                <br>
+                                <abbr title="Week 3 - Match 3">
+                                </abbr>
+                                </a>
+                            </td>
+                            <td style="padding:0;background-color:#ffcccc" class=""><b>1-3</b>
+                                <br>
+                                <abbr title="Week 2 - Match 4">
+                                </abbr>
+                                </a>
+                            </td>
+                            <td style="padding:0;background-color:#ffcccc" class=""><b>2-3</b>
+                                <br>
+                                <abbr title="Week 5 - Match 4">
+                                </abbr>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr style="height:30px">
+                            <th><span class="team-template-team-icon"><span class="team-template-image"><img alt="Samsung Galaxy" src="Samsung_galaxy_std.png" width="60" height="25"></a></span></span>
+                            </th>
+                            <td style="padding:0;background-color:#ffcccc" class=""><b>0-3</b>
+                                <br>
+                                <abbr title="Week 1 - Match 3">
+                                </abbr>
+                                </a>
+                            </td>
+                            <td style="padding:0;background-color:#ffffff" id="d5">
+                                <input type="text" style='max-width:30px;padding-left:10px' name="gameinput" class='picker' placeholder="0-0" onchange="module.cb5()" id="u5">
+                                <br>
+                                <abbr title="Week 7 - Match 2">
+                                </abbr>
+                                </a>
+                            </td>
+                            <td style="padding:0;background-color:#ffcccc" class=""><b>0-3</b>
+                                <br>
+                                <abbr title="Week 5 - Match 2">
+                                </abbr>
+                                </a>
+                            </td>
+                            <td style="padding:0;background-color:#ccffcc" class=""><b>3-1</b>
+                                <br>
+                                <abbr title="Week 2 - Match 1">
+                                </abbr>
+                                </a>
+                            </td>
+                            <td style="padding:0;background-color:#ccffcc" class=""><b>3-0</b>
+                                <br>
+                                <abbr title="Week 4 - Match 1">
+                                </abbr>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr style="height:30px">
+                            <th><span class="team-template-team-icon"><span class="team-template-image"><img alt="SK Telecom T1" src="SKT1logo_std.png" width="60" height="25"></a></span></span>
+                            </th>
+                            <td style="padding:0;background-color:#ccffcc" class=""><b>3-1</b>
+                                <br>
+                                <abbr title="Week 2 - Match 2">
+                                </abbr>
+                                </a>
+                            </td>
+                            <td style="padding:0;background-color:#ccffcc" class=""><b>3-0</b>
+                                <br>
+                                <abbr title="Week 5 - Match 1">
+                                </abbr>
+                                </a>
+                            </td>
+                            <td style="padding:0;background-color:#ccffcc" class=""><b>3-2</b>
+                                <br>
+                                <abbr title="Week 4 - Match 3">
+                                </abbr>
+                                </a>
+                            </td>
+                            <td style="padding:0;background-color:#ccffcc" class=""><b>3-2</b>
+                                <br>
+                                <abbr title="Week 1 - Match 4">
+                                </abbr>
+                                </a>
+                            </td>
+                            <td style="padding:0;background-color:#ffffff" id="d6">
+                                <input type="text" style='max-width:30px;padding-left:10px' name="gameinput" class='picker' placeholder="0-0" onchange="module.cb6()" id="u6">
+                                <br>
+                                <abbr title="Week 6 - Match 2">
+                                </abbr>
+                                </a>
+                            </td>
+                            <td style="padding:0;background-color:#ccffcc" class=""><b>3-1</b>
+                                <br>
+                                <abbr title="Week 3 - Match 4">
+                                </abbr>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr style="height:30px">
+                            <th><span class="team-template-team-icon"><span class="team-template-image"><img alt="SBENU" src="SBENUlogo_std.png" width="60" height="25"></a></span></span>
+                            </th>
+                            <td style="padding:0;background-color:#ccffcc" class=""><b>3-1</b>
+                                <br>
+                                <abbr title="Week 5 - Match 3">
+                                </abbr>
+                                </a>
+                            </td>
+                            <td style="padding:0;background-color:#ccffcc" class=""><b>3-1</b>
+                                <br>
+                                <abbr title="Week 2 - Match 3">
+                                </abbr>
+                                </a>
+                            </td>
+                            <td style="padding:0;background-color:#ffcccc" class=""><b>1-3</b>
+                                <br>
+                                <abbr title="Week 3 - Match 1">
+                                </abbr>
+                                </a>
+                            </td>
+                            <td style="padding:0;background-color:#ffcccc" class=""><b>1-3</b>
+                                <br>
+                                <abbr title="Week 4 - Match 2">
+                                </abbr>
+                                </a>
+                            </td>
+                            <td style="padding:0;background-color:#ccffcc" class=""><b>3-0</b>
+                                <br>
+                                <abbr title="Week 1 - Match 2">
+                                </abbr>
+                                </a>
+                            </td>
+                            <td style="padding:0;background-color:#ffffff" id="d7">
+                                <input type="text" style='max-width:30px;padding-left:10px' name="gameinput" class='picker' placeholder="0-0" onchange="module.cb7()" id="u7">
+                                <br>
+                                <abbr title="Week 6 - Match 4">
+                                </abbr>
+                                </a>
+                            </td>
+                            <td style="padding:0;background-color:#ffffff" id="d8">
+                                <input type="text" style='max-width:30px;padding-left:10px' name="gameinput" class='picker' placeholder="0-0" onchange="module.cb8()" id="u8">
+                                <br>
+                                <abbr title="Week 7 - Match 4">
+                                </abbr>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th><span class="team-template-team-icon"><span class="team-template-image"><img alt="CJ Entus" src="CJEntuslogo_std.png" width="60" height="25"></a></span></span>
+                            </th>
+                            <th><span class="team-template-team-icon"><span class="team-template-image"><img alt="Jin Air Green Wings" src="Green_Wings_std.png" width="60" height="25"></a></span></span>
+                            </th>
+                            <th><span class="team-template-team-icon"><span class="team-template-image"><img alt="KT Rolster" src="Rolsterlogo_std.png" width="60" height="25"></a></span></span>
+                            </th>
+                            <th><span class="team-template-team-icon"><span class="team-template-image"><img alt="MVP (team)" src="MVPlogo_std.png" width="60" height="25"></a></span></span>
+                            </th>
+                            <th><span class="team-template-team-icon"><span class="team-template-image"><img alt="Prime" src="Primelogo_std.png" width="60" height="25"></a></span></span>
+                            </th>
+                            <th><span class="team-template-team-icon"><span class="team-template-image"><img alt="Samsung Galaxy" src="Samsung_galaxy_std.png" width="60" height="25"></a></span></span>
+                            </th>
+                            <th><span class="team-template-team-icon"><span class="team-template-image"><img alt="SK Telecom T1" src="SKT1logo_std.png" width="60" height="25"></a></span></span>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+                <!--
+                                                <h4><span class="mw-headline" id="Round_3_Standings"><span style="display:none;">Round 3 Standings</span></span></h4>
+                                                <div style="display:inline-block; vertical-align: top; margin: 0 0 0 0;padding-right:3em;">
+                                                            <table class="wikitable grouptable" style="margin: 0px;">
+                                                                        <tbody>
+                                                                                    <tr>
+                                                                                                                <th colspan="6"> <span style="text-align: center;"> Round 3 Standings </span><span style="float:right;" class="plainlinks">        </span>
+                                                                                                </th>
+                                                                                    </tr>
+                                                                                    <tr style="background-color:rgb(204,255,204);">
+                                                                                                <th style="width: 16px;">.
+                                                                                                </th>
+                                                                                                <td colspan="2" style="text-align:left; background-color:rgb(204,255,204);" class="grouptableslot"> <span class="team-template-team-standard"><span class="team-template-image"><img alt="SK Telecom T1" src="SKT1logo_std.png" width="60" height="25"></a></span> <span class="team-template-text">SK Telecom T1</a></span></span>
+                                                                                                </td>
+                                                                                                <td style="width: 32px; white-space: pre; text-align:center;"><b>5-0</b> </td>
+                                                                                                <td style="width: 32px; white-space: pre; text-align:center;">15-6</td>
+                                                                                                <td style="width: 48px; white-space: pre; text-align: center;"><i>+9</i>
+                                                                                                </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                                <th style="width: 16px;background-color:rgb(187,238,187);">.
+                                                                                                </th>
+                                                                                                <td colspan="2" style="text-align:left;" class="grouptableslot"> <span class="team-template-team-standard"><span class="team-template-image"><img alt="KT Rolster" src="Rolsterlogo_std.png" width="60" height="25"></a></span> <span class="team-template-text">KT Rolster</a></span></span>
+                                                                                                </td>
+                                                                                                <td style="width: 32px; white-space: pre; text-align:center;"><b>3-2</b> </td>
+                                                                                                <td style="width: 32px; white-space: pre; text-align:center;">13-8</td>
+                                                                                                <td style="width: 48px; white-space: pre; text-align: center;"><i>+5</i>
+                                                                                                </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                                <th style="width: 16px;background-color:rgb(187,238,187);">.
+                                                                                                </th>
+                                                                                                <td colspan="2" style="text-align:left;" class="grouptableslot"> <span class="team-template-team-standard"><span class="team-template-image"><img alt="SBENU" src="SBENUlogo_std.png" width="60" height="25"></a></span> <span class="team-template-text">SBENU</a></span></span>
+                                                                                                </td>
+                                                                                                <td style="width: 32px; white-space: pre; text-align:center;"><b>3-2</b> </td>
+                                                                                                <td style="width: 32px; white-space: pre; text-align:center;">11-8</td>
+                                                                                                <td style="width: 48px; white-space: pre; text-align: center;"><i>+3</i>
+                                                                                                </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                                <th style="width: 16px;background-color:rgb(187,238,187);">.
+                                                                                                </th>
+                                                                                                <td colspan="2" style="text-align:left;" class="grouptableslot"> <span class="team-template-team-standard"><span class="team-template-image"><img alt="MVP (team)" src="MVPlogo_std.png" width="60" height="25"></a></span> <span class="team-template-text">MVP</a></span></span>
+                                                                                                </td>
+                                                                                                <td style="width: 32px; white-space: pre; text-align:center;"><b>3-2</b> </td>
+                                                                                                <td style="width: 32px; white-space: pre; text-align:center;">12-11</td>
+                                                                                                <td style="width: 48px; white-space: pre; text-align: center;"><i>+1 (-1)*</i>
+                                                                                                </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                                <th style="width: 16px;background-color:rgb(238,204,153);">.
+                                                                                                </th>
+                                                                                                <td colspan="2" style="text-align:left;" class="grouptableslot"> <span class="team-template-team-standard"><span class="team-template-image"><img alt="CJ Entus" src="CJEntuslogo_std.png" width="60" height="25"></a></span> <span class="team-template-text">CJ Entus</a></span></span>
+                                                                                                </td>
+                                                                                                <td style="width: 32px; white-space: pre; text-align:center;"><b>2-3</b> </td>
+                                                                                                <td style="width: 32px; white-space: pre; text-align:center;">10-11</td>
+                                                                                                <td style="width: 48px; white-space: pre; text-align: center;"><i>-1</i>
+                                                                                                </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                                <th style="width: 16px;background-color:rgb(238,204,153);">.
+                                                                                                </th>
+                                                                                                <td colspan="2" style="text-align:left;" class="grouptableslot"> <span class="team-template-team-standard"><span class="team-template-image"><img alt="Jin Air Green Wings" src="Green_Wings_std.png" width="60" height="25"></a></span> <span class="team-template-text">Jin Air Green Wings</a></span></span>
+                                                                                                </td>
+                                                                                                <td style="width: 32px; white-space: pre; text-align:center;"><b>2-3</b> </td>
+                                                                                                <td style="width: 32px; white-space: pre; text-align:center;">9-11</td>
+                                                                                                <td style="width: 48px; white-space: pre; text-align: center;"><i>-2</i>
+                                                                                                </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                                <th style="width: 16px;background-color:rgb(238,204,153);">.
+                                                                                                </th>
+                                                                                                <td colspan="2" style="text-align:left;" class="grouptableslot"> <span class="team-template-team-standard"><span class="team-template-image"><img alt="Samsung Galaxy" src="Samsung_galaxy_std.png" width="60" height="25"></a></span> <span class="team-template-text">Samsung Galaxy</a></span></span>
+                                                                                                </td>
+                                                                                                <td style="width: 32px; white-space: pre; text-align:center;"><b>2-3</b> </td>
+                                                                                                <td style="width: 32px; white-space: pre; text-align:center;">7-10</td>
+                                                                                                <td style="width: 48px; white-space: pre; text-align: center;"><i>-3</i>
+                                                                                                </td>
+                                                                                    </tr>
+                                                                                    <tr style="background-color:rgb(255,221,170);">
+                                                                                                <th style="width: 16px;">.
+                                                                                                </th>
+                                                                                                <td colspan="2" style="text-align:left; background-color:rgb(255,221,170);" class="grouptableslot bracket-hover"> <span class="team-template-team-standard"><span class="team-template-image"><img alt="Prime" src="Primelogo_std.png" width="60" height="25"></a></span> <span class="team-template-text">Prime</a></span></span>
+                                                                                                </td>
+                                                                                                <td style="width: 32px; white-space: pre; text-align:center;"><b>0-5</b> </td>
+                                                                                                <td style="width: 32px; white-space: pre; text-align:center;">3-15</td>
+                                                                                                <td style="width: 48px; white-space: pre; text-align: center;"><i>-12 (-2)*</i>
+                                                                                                </td>
+                                                                                    </tr>
+                                                                        </tbody>
+                                                            </table>
+                                                            <p>* Received map penalties for accumulating multiple warnings
+                                                            </p>
+                    -->
+                    <p><small> <a href="http://maxbittker.github.io">maxbittker.github.io</a> &nbsp;  
+                    some resources borrowed with love from liquipedia ❤</small> </p
+                </div>
+            </body>
+        </html>
