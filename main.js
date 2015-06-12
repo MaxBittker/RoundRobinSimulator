@@ -210,11 +210,11 @@ function update() {
         if (matchresults[m][0] === "3") {
             WorkingStatus['teams'][l]["won"]++;
             WorkingStatus['teams'][r]["lost"]++;
-            console.log(WorkingStatus['teams'][l]["team"] + 'beat' + WorkingStatus['teams'][r]["team"]);
+            // console.log(WorkingStatus['teams'][l]["team"] + 'beat' + WorkingStatus['teams'][r]["team"]);
         } else if (matchresults[m][2] === "3") {
             WorkingStatus['teams'][r]["won"]++;
             WorkingStatus['teams'][l]["lost"]++;
-            console.log(WorkingStatus['teams'][r]["team"] + 'beat' + WorkingStatus['teams'][l]["team"]);
+            // console.log(WorkingStatus['teams'][r]["team"] + 'beat' + WorkingStatus['teams'][l]["team"]);
         }
     }
 }
@@ -223,7 +223,21 @@ function render() {
     WorkingStatus = JSON.parse(JSON.stringify(initialStatus));
     update();
     sortResults()
-    document.getElementById("results").innerHTML = tableify(sorted);
+    // sorted["maps won"] === undefined;
+
+    var html = tableify(sorted);
+    html = html.replace("SKT","<span class=\"team-template-team-icon\"><span class=\"team-template-image\"><img alt=\"SK Telecom T1\" src=\"SKT1logo_std.png\" width=\"60\" height=\"25\"></a></span></span> SK Telecom T1");
+    html = html.replace("KTR","<span class=\"team-template-team-icon\"><span class=\"team-template-image\"><img alt=\"SK Telecom T1\" src=\"Rolsterlogo_std.png\" width=\"60\" height=\"25\"></a></span></span> KT Rolster");
+
+    html = html.replace("SBN","<span class=\"team-template-team-icon\"><span class=\"team-template-image\"><img alt=\"SK Telecom T1\" src=\"SBENUlogo_std.png\" width=\"60\" height=\"25\"></a></span></span> SBENU");
+    html = html.replace("MVP","<span class=\"team-template-team-icon\"><span class=\"team-template-image\"><img alt=\"SK Telecom T1\" src=\"MVPlogo_std.png\" width=\"60\" height=\"25\"></a></span></span> MVP");
+
+    html = html.replace("CJE","<span class=\"team-template-team-icon\"><span class=\"team-template-image\"><img alt=\"SK Telecom T1\" src=\"CJEntuslogo_std.png\" width=\"60\" height=\"25\"></a></span></span> CJ Entus");
+    html = html.replace("JGW","<span class=\"team-template-team-icon\"><span class=\"team-template-image\"><img alt=\"SK Telecom T1\" src=\"Green_Wings_std.png\" width=\"60\" height=\"25\"></a></span></span> Jin Air Green Wings");
+    html = html.replace("SMG","<span class=\"team-template-team-icon\"><span class=\"team-template-image\"><img alt=\"SK Telecom T1\" src=\"Samsung_galaxy_std.png\" width=\"60\" height=\"25\"></a></span></span> Samsung Galaxy");
+    html = html.replace("PRM","<span class=\"team-template-team-icon\"><span class=\"team-template-image\"><img alt=\"SK Telecom T1\" src=\"Primelogo_std.png\" width=\"60\" height=\"25\"></a></span></span> Prime");
+  
+    document.getElementById("results").innerHTML = html;
     return;
 }
 // render();

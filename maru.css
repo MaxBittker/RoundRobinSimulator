@@ -1,17 +1,53 @@
+
 #results tr:nth-child(-n+4)
 {
     background-color:rgb(187,238,187);    
 }
+thead th
+{
+    background-color:rgb(187,187,187);    
+/*    visibility: hidden;*/
+}
 #results tr:nth-child(n+5)
 {
+    
     background-color:rgb(238,187,187);    
+}
+#results td:nth-child(1)
+{
+text-align: left;
+
+}
+#header {
+background-color: #606dbc;  
+    color: aliceblue;
+    padding: .5em;
 }
 #results td
 {
-    align-self: center;
+text-align: center;
+
+
 }
 #results
 {
 align-content: center;
-/*    background-color: aqua*/
+margin: 10px;
+
 }
+body{
+background: repeating-linear-gradient(
+  45deg,
+  #606dbc,
+  #606dbc 10px,
+  #465298 10px,
+  #465298 20px
+);
+}
+/*
+.string *
+{
+align: left;
+text-align: left;
+}
+*/
