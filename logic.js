@@ -4,52 +4,52 @@ var sorted;
 var initialStatus = {
     'teams': [{
         'team': "SKT",
-        'won': 5,
+        'won': 6,
         'lost': 0,
-        'maps won': 15,
-        'maps lost': 6
+        'maps won': 18,
+        'maps lost': 7
     }, {
         'team': "KTR",
-        'won': 3,
+        'won': 4,
         'lost': 2,
-        'maps won': 13,
+        'maps won': 16,
         'maps lost': 8
     }, {
         'team': "SBN",
         'won': 3,
-        'lost': 2,
-        'maps won': 11,
-        'maps lost': 8
+        'lost': 3,
+        'maps won': 12,
+        'maps lost': 11
     }, {
         'team': "MVP",
         'won': 3,
-        'lost': 2,
+        'lost': 3,
         'maps won': 12,
-        'maps lost': 12
+        'maps lost': 16
     }, {
         'team': "CJE",
         'won': 2,
+        'lost': 4,
+        'maps won': 10,
+        'maps lost': 14
+    }, {
+        'team': "JGW",
+        'won': 3,
+        'lost': 3,
+        'maps won': 12,
+        'maps lost': 11
+    }, {
+        'team': "SMG",
+        'won': 3,
         'lost': 3,
         'maps won': 10,
         'maps lost': 11
     }, {
-        'team': "JGW",
-        'won': 2,
-        'lost': 3,
-        'maps won': 9,
-        'maps lost': 11
-    }, {
-        'team': "SMG",
-        'won': 2,
-        'lost': 3,
-        'maps won': 7,
-        'maps lost': 10
-    }, {
         'team': "PRM",
         'won': 0,
-        'lost': 5,
-        'maps won': 3,
-        'maps lost': 17
+        'lost': 6,
+        'maps won': 4,
+        'maps lost': 20
     }]
 };
 var WorkingStatus = JSON.parse(JSON.stringify(initialStatus));
@@ -127,6 +127,7 @@ function render() {
     WorkingStatus = JSON.parse(JSON.stringify(initialStatus));
     update();
     sortResults()
+    coalate()
         // sorted["maps won"] === undefined;
     var html = tableify(sorted);
     html = html.replace("SKT", "<span class=\"team-template-team-icon\"><span class=\"team-template-image\"><img alt=\"SK Telecom T1\" src=\"SKT1logo_std.png\" width=\"60\" height=\"25\"></a></span></span> SK Telecom T1");
@@ -146,6 +147,20 @@ function sortResults() {
         return (a["won"] < b["won"]) ? 1 : ((a["won"] > b["won"]) ? -1 : (((a["maps won"] - a['maps lost']) < (b["maps won"] - b['maps lost'])) ? 1 : 0));
     });
 }
+
+function coalate(){
+for(var t = 0; t<8; t++)
+{
+    sorted[t]["map balance"] = (sorted[t]["maps won"] - sorted[t]["maps lost"]);
+    delete sorted[t]["maps won"];
+    delete sorted[t]["maps lost"];
+
+}
+}
 window.onload = function() {
+    // poll('u1');
+    // poll('u2');
+    // poll('u6');
+    // poll('u7');
     render();
 }
